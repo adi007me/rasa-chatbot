@@ -84,4 +84,6 @@ def get_restaurant_list(loc, cuisine):
       }
       result.append(data)
 
+  result = sorted(result, key = lambda k: k['rating'], reverse=True)
+
   return result
