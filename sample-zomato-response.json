@@ -1,0 +1,107 @@
+{
+  "restaurant": {
+    "R": {
+      "has_menu_status": {
+        "delivery": 1,
+        "takeaway": -1
+      },
+      "res_id": 18079789,
+      "is_grocery_store": False
+    },
+    "apikey": "f4924dc9ad672ee8c4f8c84743301af5",
+    "id": "18079789",
+    "name": "Jimis Burger",
+    "url": "https: //www.zomato.com/mumbai/jimis-burger-malad-west?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+    "location": {
+      "address": "13-14, Pleasant Park, Off Link Road, Evershine Nagar, Opposite Movie Time Cinema, Malad West, Mumbai",
+      "locality": "Malad West",
+      "city": "Mumbai",
+      "city_id": 3,
+      "latitude": "19.1890921554",
+      "longitude": "72.8348258883",
+      "zipcode": "400064",
+      "country_id": 1,
+      "locality_verbose": "Malad West, Mumbai"
+    },
+    "switch_to_order_menu": 0,
+    "cuisines": "Burger, Fast Food",
+    "timings": "12 Noon to 12 Midnight",
+    "average_cost_for_two": 700,
+    "price_range": 2,
+    "currency": "Rs.",
+    "highlights": [
+      "Dinner",
+      "Delivery",
+      "Credit Card",
+      "Lunch",
+      "Cash",
+      "Takeaway Available",
+      "Debit Card",
+      "Indoor Seating",
+      "Air Conditioned",
+      "Digital Payments Accepted"
+    ],
+    "offers": [],
+    "opentable_support": 0,
+    "is_zomato_book_res": 0,
+    "mezzo_provider": "OTHER",
+    "is_book_form_web_view": 0,
+    "book_form_web_view_url": "",
+    "book_again_url": "",
+    "thumb": "https://b.zmtcdn.com/data/pictures/9/18079789/7a6a9e42e4f7e7ab21e894ef83743d73.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+    "user_rating": {
+      "aggregate_rating": "4.5",
+      "rating_text": "Excellent",
+      "rating_color": "3F7E00",
+      "rating_obj": {
+        "title": {
+          "text": "4.5"
+        },
+        "bg_color": {
+          "type": "lime",
+          "tint": "700"
+        }
+      },
+      "votes": 9519
+    },
+    "all_reviews_count": 2921,
+    "photos_url": "https://www.zomato.com/mumbai/jimis-burger-malad-west/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+    "photo_count": 5171,
+    "menu_url": "https://www.zomato.com/mumbai/jimis-burger-malad-west/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+    "featured_image": "https://b.zmtcdn.com/data/pictures/9/18079789/7a6a9e42e4f7e7ab21e894ef83743d73.jpg?output-format=webp",
+    "has_online_delivery": 1,
+    "is_delivering_now": 1,
+    "store_type": "",
+    "include_bogo_offers": True,
+    "deeplink": "zomato://restaurant/18079789",
+    "order_url": "https://www.zomato.com/mumbai/jimis-burger-malad-west/order?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+    "order_deeplink": "",
+    "is_table_reservation_supported": 0,
+    "has_table_booking": 0,
+    "events_url": "https://www.zomato.com/mumbai/jimis-burger-malad-west/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+    "phone_numbers": "+91 8879485752",
+    "all_reviews": {
+      "reviews": [
+        {
+          "review": []
+        },
+        {
+          "review": []
+        },
+        {
+          "review": []
+        },
+        {
+          "review": []
+        },
+        {
+          "review": []
+        }
+      ]
+    },
+    "establishment": [
+      "Quick Bites"
+    ],
+    "establishment_types": []
+  }
+}

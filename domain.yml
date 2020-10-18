@@ -1,5 +1,6 @@
 actions:
 - action_search_restaurants
+- action_send_email
 - ask_satisfied
 - utter_ask_cuisine
 - utter_ask_howcanhelp
@@ -8,12 +9,15 @@ actions:
 - utter_default
 - utter_goodbye
 - utter_greet
-- utter_waiting
+- utter_ask_budget
+- utter_search_in_progress
 entities:
 - cuisine
 - location
 - people
 - price
+- budget
+- email
 intents:
 - affirm
 - greet
@@ -32,6 +36,15 @@ responses:
     - payload: North Indian
       title: North Indian
     text: what kind of cuisine would you like?
+  utter_ask_budget:
+  - buttons:
+    - payload: Lesser than Rs. 300
+      title: Lesser than Rs. 300
+    - payload: Rs. 300 to 700
+      title: Rs. 300 to 700
+    - payload: More than 700
+      title: More than 700
+    text:  What's the average budget for two people?
   utter_ask_howcanhelp:
   - text: how can I help you?
   utter_ask_location:
@@ -47,8 +60,10 @@ responses:
   - text: Hey there! How may I help you ?
   - text: Hi, How can I help you!
   - text: Hey, How is it going. How May I help you today ?
-  utter_waiting:
-  - text: Processing your request...
+  utter_search_in_progress:
+  - text: Searching best restaurants for you. Please wait ...
+  utter_ask_email:
+  - text: Should I send you details of all the restaurants on email?
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 0
@@ -56,4 +71,8 @@ slots:
   cuisine:
     type: text
   location:
+    type: text
+  budget:
+    type: text
+  email:
     type: text

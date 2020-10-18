@@ -52,6 +52,10 @@
 - [mumbai](location)
 - [North Indian](cuisine)
 - [pune](location)
+- [Lesser than Rs. 300](budget)
+- [Rs. 300 to 700](budget)
+- [More than 700](budget)
+-  yes. Please send it to [adi007me@gmail.com](email)
 
 ## intent:affirm
 - yes
@@ -93,7 +97,11 @@
 ## regex:greet
 - hey[.]*
 
+## regex:email
+- [A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Za-z]{2,}
+
 ## lookup: location
-- mumbai
-- delhi
-- pune
+data/lookups/location.txt
+
+## lookup: cuisine
+data/lookups/cuisine.txt

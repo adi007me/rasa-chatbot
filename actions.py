@@ -7,6 +7,8 @@ from rasa_sdk.events import SlotSet
 import zomatopy
 import json
 
+import sendemail
+
 class ActionSearchRestaurants(Action):
 	def name(self):
 		return 'action_search_restaurants'
@@ -31,9 +33,29 @@ class ActionSearchRestaurants(Action):
 			response= "no results"
 		else:
 			for restaurant in d['restaurants']:
-				response=response+ "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+"\n"
+				response=response + restaurant['restaurant']['name'] + \
+					" in " + restaurant['restaurant']['location']['address'] + \
+					" has been rated " + restaurant['restaurant']['user_rating']['aggregate_rating'] + "\n"
 
-		dispatcher.utter_message("-----"+response)
+		response = response + "\n"
+
+		dispatcher.utter_message(response)
 
 		return [SlotSet('location',loc)]
 
+class ActionSendEmail(Action):
+	def name(self):
+		return "action_send_email"
+	
+	def run(self, dispatcher, tracker, domain):
+		receiver_address = tracker.get_slot('email')
+		loc = tracker.get_slot('location')
+		cuisine = tracker.get_slot('cuisine')
+
+		print('sending email')
+
+		sendemail.send(receiver_address, loc, cuisine, subject='Restaurant Search Bot')
+
+		dispatcher.utter_message("Sent")
+
+		return [SlotSet('email', receiver_address)]
