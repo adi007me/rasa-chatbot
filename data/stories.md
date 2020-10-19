@@ -71,7 +71,7 @@
 * affirm
     - utter_goodbye
 
-## story_3.2
+## story_email_denied
 * greet
     - utter_greet
 * restaurant_search{"location": "delhi"}
