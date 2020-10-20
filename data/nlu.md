@@ -13,11 +13,15 @@
 - looking for restaurant
 - i'm hungry. looking out for some good restaurants
 - can you suggest some good restaurants in [Rishikesh](location)
+- can you suggest some good restaurants in [Perumbavoor](location)
+- can you suggest some good restaurants in [Thodupuzha](location)
 - i'm looking for a place to eat
 - I want to grab lunch
 - I am searching for a dinner spot
 - I am looking for some restaurants in [Delhi](location).
 - I am looking for some restaurants in [Bangalore](location)
+- I am looking for some restaurants in [Thodupuzha](location)
+- I am looking for some restaurants in [Perumbavoor](location)
 - show me [chinese](cuisine) restaurants
 - show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "Delhi"}
 - show me a [mexican](cuisine) place in the [centre](location)
@@ -49,14 +53,21 @@
 - please find me a restaurant in [ahmedabad](location)
 - please show me a few [italian](cuisine) restaurants in [bangalore](location)
 - I am looking for restaurant
-- [mumbai](location)
-- [North Indian](cuisine)
 - [pune](location)
 - [Lesser than Rs. 300](budget)
 - [Rs. 300 to 700](budget)
 - [More than 700](budget)
--  yes. Please send it to [adi007me@gmail.com](email)
+- yes. Please send it to [adi007me@gmail.com](email)
 - [abcd@xyz.com](email)
+- [Thodupuzha](location)
+- can you suggest some good restaurants in [New](location) [Delhi](location)
+- I'll prefer [chines]{"entity": "cuisine", "value": "chinese"}
+- [>700](budget)
+- yes. please send it to [siva.cem@gmail.com](email)
+- [iamrasa.x@gmail.com](email)
+- [siva.cem@gmail.com](email)
+- looking for a place to eat in [thodupuzha](location)
+- can you find me a place to eat in [pala](location)
 
 ## intent:affirm
 - yes
@@ -145,7 +156,6 @@
 - go for it
 - going super well
 - good.
-- great
 - great lets do that
 - great!
 - hell yeah
@@ -176,7 +186,6 @@
 - oh cool
 - oh good !!
 - oh super
-- ok
 - ok cool
 - ok fine
 - ok friend
@@ -229,14 +238,12 @@
 - ye
 - ye splease
 - yea
-- yeah
 - yeah do that
 - yeah sure
 - yeah'=
 - yeah, why not
 - yeeeeezzzzz
 - yeeees
-- yep
 - yep i want that
 - yep if i have to
 - yep please
@@ -244,7 +251,6 @@
 - yep thats cool
 - yep, will do thank you
 - yep. :/
-- yes
 - yes ...
 - yes I do
 - yes accept please
@@ -355,7 +361,6 @@
 - neither
 - never
 - never mind
-- no
 - no :(
 - no I dont want
 - no I haven't decided yet if I want to sign up
@@ -371,7 +376,6 @@
 - no sir
 - no sorry
 - no thank s
-- no thank you
 - no thanks
 - no way
 - no you did it wrong
@@ -391,7 +395,6 @@
 - nope. i am good
 - not going well at all
 - not really
-- not right now
 - not yet
 - nö
 - sorry not right now
@@ -421,6 +424,16 @@
 
 ## synonym:Delhi
 - New Delhi
+- delhi
+- dilli
+- Dilli
+- new delhi
+- newdelhi
+- NewDelhi
+
+## synonym:Bangalore
+- bangalore
+- bengaluru
 
 ## synonym:chinese
 - chines
@@ -429,14 +442,14 @@
 ## synonym:mid
 - moderate
 
-## regex:greet
-- hey[.]*
-
 ## regex:email
 - [A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Za-z]{2,}
 
+## regex:greet
+- hey[.]*
+
 ## lookup: location
-data/lookups/location.txt
+  data/lookups/location.txt
 
 ## lookup: cuisine
-data/lookups/cuisine.txt
+  data/lookups/cuisine.txt

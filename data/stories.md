@@ -1,10 +1,12 @@
-## story_1
+## Story: Example 1
 * greet
     - utter_greet
 * restaurant_search
     - utter_ask_location
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
+    - action_check_city_support
+    - slot{"city_support": true}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -28,6 +30,8 @@
     - utter_greet
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
+    - action_check_city_support
+    - slot{"city_support": true}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -51,6 +55,8 @@
     - utter_greet
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
+    - action_check_city_support
+    - slot{"city_support": true}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -76,6 +82,8 @@
     - utter_greet
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
+    - action_check_city_support
+    - slot{"city_support": true}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -95,6 +103,8 @@
     - utter_greet
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
+    - action_check_city_support
+    - slot{"city_support": true}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -105,3 +115,48 @@
     - action_search_restaurants
     - slot{"location": "mumbai"}
     - slot{"error": true}
+
+
+## Story - Example 2
+* greet
+    - utter_greet
+* restaurant_search{"location": "Delhi"}
+    - slot{"location": "Delhi"}
+    - action_check_city_support
+    - slot{"city_support": true}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_budget
+* restaurant_search{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - utter_search_in_progress
+    - action_search_restaurants
+    - slot{"location": "Delhi"}
+    - slot{"error": false}
+    - utter_ask_email
+* restaurant_search{"email": "siva.cem@gmail.com"}
+    - slot{"email": "siva.cem@gmail.com"}
+    - action_send_email
+    - slot{"email": "siva.cem@gmail.com"}
+    - utter_inform_email_sent
+
+## Story for out of service city 1
+* greet
+    - utter_greet
+* restaurant_search{"location": "thodupuzha"}
+    - slot{"location": "thodupuzha"}
+    - action_check_city_support
+    - slot{"city_support": false}
+    - utter_city_out_of_service
+
+## Story for out of service city 2
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "Thodupuzha"}
+    - slot{"location": "Thodupuzha"}
+    - action_check_city_support
+    - slot{"city_support": false}
+    - utter_city_out_of_service

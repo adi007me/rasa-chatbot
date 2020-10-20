@@ -24,9 +24,14 @@ class ActionSearchRestaurants(Action):
             d1 = json.loads(location_detail)
             lat=d1["location_suggestions"][0]["latitude"]
             lon=d1["location_suggestions"][0]["longitude"]
-            cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north indian':50,'south indian':85}
+            cuisines_dict={ 'chinese': 25,
+                            'mexican' : 73,
+                            'italian': 55,
+                            'american': 1,
+                            'north indian':50,
+                            'south indian':85 }
 
-            results=zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 5)
+            results=zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine.lower())), 5)
             d = json.loads(results)
 
             response="Showing you top rated restaurants..\n"
@@ -74,9 +79,11 @@ class ActionCheckCitySupport(Action):
 
         with open("data\lookups\location.txt") as openfile:
             for line in openfile:
-                if(line.rstrip("\n") == loc):
+                if(line.tolrstrip("\n") == loc):
+                    # dispatcher.utter_message("###City found")
                     return [SlotSet('city_support', True)]
 
+        # dispatcher.utter_message("###City not found!!")
         return [SlotSet('city_support', False)]
 
 
