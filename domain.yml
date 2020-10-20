@@ -1,6 +1,7 @@
 actions:
 - action_search_restaurants
 - action_send_email
+- action_check_city_support
 - ask_satisfied
 - utter_ask_cuisine
 - utter_ask_howcanhelp
@@ -85,4 +86,6 @@ slots:
   email:
     type: text
   error:
+    type: bool
+  city_support:
     type: bool
