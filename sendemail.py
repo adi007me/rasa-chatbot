@@ -16,7 +16,6 @@ Thank You for using Foodie
 '''
 
 #The mail addresses and password
-# sender_address = os.environ.get('SENDER_EMAIL')
 sender_address = "iamrasa.x@gmail.com"
 sender_pass = 'x.asarmai!@#'
 

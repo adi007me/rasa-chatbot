@@ -22,8 +22,8 @@
     - slot{"email": "abc@xyz.com"}
     - action_send_email
     - slot{"email": "abc@xyz.com"}
-* affirm
-    - utter_goodbye
+    - slot{"error": false}
+    - utter_inform_email_sent
 
 ## story_3
 * greet
@@ -47,8 +47,8 @@
     - slot{"email": "abc@xyz.com"}
     - action_send_email
     - slot{"email": "abc@xyz.com"}
-* affirm
-    - utter_goodbye
+    - slot{"error": false}
+    - utter_inform_email_sent
 
 ## story_3.1
 * greet
@@ -74,6 +74,8 @@
     - slot{"email": "abc@xyz.com"}
     - action_send_email
     - slot{"email": "abc@xyz.com"}
+    - slot{"error": false}
+    - utter_inform_email_sent
 * affirm
     - utter_goodbye
 
@@ -139,6 +141,7 @@
     - slot{"email": "siva.cem@gmail.com"}
     - action_send_email
     - slot{"email": "siva.cem@gmail.com"}
+    - slot{"error": false}
     - utter_inform_email_sent
 
 ## Story for out of service city 1
@@ -148,6 +151,7 @@
     - slot{"location": "thodupuzha"}
     - action_check_city_support
     - slot{"city_support": false}
+    - slot{"error": false}
     - utter_city_out_of_service
 
 ## Story for out of service city 2
@@ -160,3 +164,36 @@
     - action_check_city_support
     - slot{"city_support": false}
     - utter_city_out_of_service
+
+## Story for out of service city error
+* greet
+    - utter_greet
+* restaurant_search{"location": "thodupuzha"}
+    - slot{"location": "thodupuzha"}
+    - action_check_city_support
+    - slot{"error": true}
+    - utter_something_wrong
+
+## Story - Email error
+* greet
+    - utter_greet
+* restaurant_search{"location": "Delhi"}
+    - slot{"location": "Delhi"}
+    - action_check_city_support
+    - slot{"city_support": true}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_budget
+* restaurant_search{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - utter_search_in_progress
+    - action_search_restaurants
+    - slot{"location": "Delhi"}
+    - slot{"error": false}
+    - utter_ask_email
+* restaurant_search{"email": "siva.cem@gmail.com"}
+    - slot{"email": "siva.cem@gmail.com"}
+    - action_send_email
+    - slot{"error": true}
+    - utter_something_wrong

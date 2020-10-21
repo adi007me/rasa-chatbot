@@ -15,6 +15,7 @@ actions:
 - utter_greet
 - utter_inform_email_sent
 - utter_search_in_progress
+- utter_something_wrong
 entities:
 - budget
 - cuisine
@@ -82,6 +83,8 @@ responses:
   - text: Sent, Thank you.
   utter_search_in_progress:
   - text: Searching best restaurants for you. Please wait ...
+  utter_something_wrong:
+  - text: Something went wrong. Please try again later.
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 0

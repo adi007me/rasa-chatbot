@@ -57,17 +57,18 @@ class ActionSendEmail(Action):
         return "action_send_email"
     
     def run(self, dispatcher, tracker, domain):
-        receiver_address = tracker.get_slot('email')
-        loc = tracker.get_slot('location')
-        cuisine = tracker.get_slot('cuisine')
+        try:
+            receiver_address = tracker.get_slot('email')
+            loc = tracker.get_slot('location')
+            cuisine = tracker.get_slot('cuisine')
 
-        print('sending email')
+            print('sending email')
 
-        sendemail.send(receiver_address, loc, cuisine, subject='Restaurant Search Bot')
+            sendemail.send(receiver_address, loc, cuisine, subject='Restaurant Search Bot')
 
-        dispatcher.utter_message("Sent")
-
-        return [SlotSet('email', receiver_address)]
+            return [SlotSet('email', receiver_address)]
+        except:
+            return [SlotSet('error', True)]
 
 
 class ActionCheckCitySupport(Action):
@@ -75,15 +76,26 @@ class ActionCheckCitySupport(Action):
         return "action_check_city_support"
     
     def run(self, dispatcher, tracker, domain):
-        loc = tracker.get_slot('location')
+        try:
+            loc = tracker.get_slot('location')
 
-        with open("data\lookups\location.txt") as openfile:
-            for line in openfile:
-                if(line.tolrstrip("\n") == loc):
-                    # dispatcher.utter_message("###City found")
-                    return [SlotSet('city_support', True)]
+            supported_cities = [line.rstrip().lower() for line in open(r'data\lookups\location.txt')]
 
-        # dispatcher.utter_message("###City not found!!")
-        return [SlotSet('city_support', False)]
+            supported = loc.lower() in supported_cities
+
+            return [SlotSet('city_support', supported), SlotSet('error', False)]
+        except:
+            return [SlotSet('error', True)]
+
+        # with open("data\lookups\location.txt") as openfile:
+        #     for line in openfile:
+        #         print(loc)
+        #         print(type(line))
+        #         if(line.tolrstrip("\n") == loc):
+        #             # dispatcher.utter_message("###City found")
+                    
+
+        # # dispatcher.utter_message("###City not found!!")
+        # return [SlotSet('city_support', False)]
 
 
