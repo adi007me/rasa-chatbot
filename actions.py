@@ -86,16 +86,3 @@ class ActionCheckCitySupport(Action):
             return [SlotSet('city_support', supported), SlotSet('error', False)]
         except:
             return [SlotSet('error', True)]
-
-        # with open("data\lookups\location.txt") as openfile:
-        #     for line in openfile:
-        #         print(loc)
-        #         print(type(line))
-        #         if(line.tolrstrip("\n") == loc):
-        #             # dispatcher.utter_message("###City found")
-                    
-
-        # # dispatcher.utter_message("###City not found!!")
-        # return [SlotSet('city_support', False)]
-
-

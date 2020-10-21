@@ -23,7 +23,7 @@
 - I am looking for some restaurants in [Thodupuzha](location)
 - I am looking for some restaurants in [Perumbavoor](location)
 - show me [chinese](cuisine) restaurants
-- show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "Delhi"}
+- show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "delhi"}
 - show me a [mexican](cuisine) place in the [centre](location)
 - i am looking for an [indian](cuisine) spot called olaolaolaolaolaola
 - search for restaurants
@@ -134,24 +134,553 @@
 ## synonym:4
 - four
 
-## synonym:Delhi
+## lookup: location
+  data/lookups/location.txt
+
+## lookup: cuisine
+  data/lookups/cuisine.txt
+
+## synonym:chinese
+- Chinese
+- Chines
+- chines
+
+## synonym:mexican
+- Mexicn
+- Mexican
+- mxican
+
+## synonym:italian
+- Italian
+- Italin
+- Itlian
+
+## synonym:american
+- American
+- americn
+- amrican
+
+## synonym:south indian
+- South Indian
+- South indian
+- south Indian
+
+## synonym:north indian
+- North Indian
+- North indian
+- north Indian
+
+## synonym:ahmedabad
+- Ahmedabad
+- Ahmedbad
+- Ahmeadbad
+
+## synonym:Bangalore
+- bengaluru
+- bangalore
+- Bangalur
+- banglore
+- banglor
+
+## synonym:chennai
+- chenai
+- chenni
+- madras
+
+## synonym:delhi
 - New Delhi
+- Delli
+- Dilli
 - delhi
 - dilli
-- Dilli
 - new delhi
 - newdelhi
 - NewDelhi
 
-## synonym:Bengaluru
-- bangalore
-- bengaluru
-- banglore
-- banglor
+## synonym:hyderabad
+- Hyderabad
+- hyderbad
+- hyderabd
 
-## synonym:chinese
-- chines
-- Chinese
+## synonym:kolkata
+- Kolkata
+- Calcutta
+- Kolkatta
+
+## synonym:mumbai
+- Mumbai
+- Bombai
+- Bombay
+
+## synonym:pune
+- Pne
+- Puna
+- puna
+
+## synonym:agra
+- Agra
+- Agra
+- Agra
+
+## synonym:ajmer
+- Ajmer
+- ajmr
+- ajmer
+
+## synonym:aligarh
+- alligarh
+- Aligarh
+- Aligadh
+
+## synonym:allahabad
+- Allahbad
+- Alahabad
+- Illahabad
+- Prayagraj
+
+## synonym:amravati
+- Amrvati
+- Amravatti
+- Amaravati
+
+## synonym:amritsar
+- amratsar
+- amaritsar
+- amrtsar
+
+## synonym:asansol
+- asnsol
+- asansole
+- asansol
+
+## synonym:aurangabad
+- aurangabad
+- arangbad
+- aurangabd
+
+## synonym:bareilly
+- barelly
+- barelly
+- bareilly
+
+## synonym:belgaum
+- Belgam
+- Belegaum
+- Belegam
+
+## synonym:bhavnagar
+- bhavanagar
+- Bhavnagar
+- bhaavnagar
+
+## synonym:bhiwandi
+- bhiwaandi
+- biwandi
+- bhiwandi
+
+## synonym:bhopal
+- Bhopa
+- Bhopl
+- Bhopal
+
+## synonym:bhubaneswar
+- bhubaneswar
+- Bhuvaneswar
+- Bhubaneshwar
+
+## synonym:bikaner
+- Bikaner
+- Bikanair
+- Bekaner
+
+## synonym:Bokaro Steel City
+- Bokaro
+- Bokaro Steel City
+- Bokaro Steel city
+
+## synonym:chandigarh
+- Chandigarh
+- Chandigadh
+- Chandigar
+
+## synonym:coimbatore
+- Coimbatore
+- cbe
+- Coimbator
+
+## synonym:Cuttack
+- Cuttck
+- Cuttak
+- Cuttack
+
+## synonym:dehradun
+- Dehradun
+- Deharadun
+- Dehradun
+
+## synonym:dhanbad
+- Dhanabad
+- Dhanbd
+- Dhanbad
+
+## synonym:Durg-Bhilai Nagar
+- Durg Nagar
+- Bhilai Nagar
+- Durg-Bhilai
+
+## synonym:durgapur
+- Duragapur
+- Durgapure
+- Durgapur
+
+## synonym:erode
+- Erode
+- Erod
+- erodey
+
+## synonym:faridabad
+- Faridabd
+- Fardabad
+- Faridabad
+
+## synonym:Firozabad
+- Firozbad
+- Firzabad
+- Firozabad
+
+## synonym:ghaziabad
+- Gaziabad
+- Ghazibad
+- Ghaziabad
+
+## synonym:gorakhpur
+- Gorakpur
+- Gorkhpur
+- Gorakhpur
+
+## synonym:gulbarga
+- Gulbrga
+- Gulbarg
+- Gulbarga
+
+## synonym:guntur
+- Guntr
+- Gantur
+- Guntoor
+
+## synonym:gurgaon
+- Gurugaon
+- Gurugram
+- Gurgao
+
+## synonym:guwahati
+- Gowahati
+- Guwahathi
+- Guwahati
+
+## synonym:gwalior
+- Gwaliar
+- Ghwaliar
+- Gwalior
+
+## synonym:Hubli-Dharwad
+- Hubli
+- Dharwad
+- Hubli-Darwad
+
+## synonym:indore
+- Indor
+- Indore
+- Indoor
+
+## synonym:jabalpur
+- jabalpur
+- Jablpur
+- Jabalpur
+
+## synonym:jaipur
+- Jaipure
+- Jaypur
+- Jaipur
+
+## synonym:jalandhar
+- Jalandhr
+- Jalanadhar
+- Jalandar
+
+## synonym:jammu
+- Jammu
+- Jamu
+
+## synonym:jamnagar
+- Jamanagar
+- Jamnagr
+- Jamnagar
+
+## synonym:jamshedpur
+- jamshedpure
+- Jamshedpur
+- Jamshedpur
+
+## synonym:jhansi
+- Jansi
+- Jhanasi
+- Jhansi
+
+## synonym:jodhpur
+- Jodpur
+- Jodhpure
+- Jodhpur
+
+## synonym:Kannur
+- Kanur
+- Kannur
+- Kannur
+
+## synonym:kanpur
+- cawnpur
+- Kaanpur
+- Kanpur
+
+## synonym:kakinada
+- Kakinda
+- Kakinad
+- Kakinada
+
+## synonym:Kochi
+- Cochi
+- cochin
+- Kochi
+
+## synonym:Kottayam
+- Kotayam
+- Kottyam
+- Kottayam
+
+## synonym:kolhapur
+- Kolapur
+- Kohlapur
+- Kolhapur
+
+## synonym:kollam
+- Kolam
+- Kollam
+- Kollam
+
+## synonym:kota
+- Kota
+- Kota
+- Kota
+
+## synonym:kozhikode
+- Kozhikod
+- Kozhikode
+- Kozhikode
+
+## synonym:kurnool
+- Kurnol
+- Koornool
+- Kurnool
+
+## synonym:lucknow
+- Lucknow
+- Lko
+- Luknow
+
+## synonym:ludhiana
+- Ludiana
+- Ludhiana
+- Ludhiana
+
+## synonym:madurai
+- Madurai
+- Madurai
+- Madurai
+
+## synonym:malappuram
+- Malapuram
+- Mallappuram
+- Malappuram
+
+## synonym:mathura
+- Matura
+- Mathura
+- Mathura
+
+## synonym:mangalore
+- Mangalor
+- Manglore
+- Mangalore
+
+## synonym:meerut
+- Merut
+- Meerut
+- Meerut
+
+## synonym:moradabad
+- Muradabad
+- Moradbad
+- Moradabad
+
+## synonym:mysore
+- mysore
+- Mysor
+- Mysure
+
+## synonym:nagpur
+- Nagpure
+- Nagpor
+- Nagpur
+
+## synonym:nanded
+- Nanded
+
+## synonym:nashik
+- Nasik
+- Nashik
+- Naseek
+
+## synonym:nellore
+- Nellor
+- Nelore
+- Nellore
+
+## synonym:noida
+- greater Noida
+- G. Noida
+- Noida
+
+## synonym:palakkad
+- Palakad
+- Pallakkad
+- Pallakad
+
+## synonym:patna
+- Patna
+
+## synonym:pondicherry
+- Puducherry
+- Puducherri
+- Pondi
+
+## synonym:raipur
+- Raipur
+- Raipoor
+
+## synonym:rajkot
+- Rjakot
+- Raajkot
+- Rajkot
+
+## synonym:rajahmundry
+- Rajamundry
+- Rajhmundry
+- Rajmundry
+
+## synonym:ranchi
+- Rancih
+- Ranchi
+
+## synonym:rourkela
+- Rourkel
+- Rorkela
+- Rourekla
+
+## synonym:salem
+- Selam
+- Salem
+
+## synonym:sangli
+- sangli
+- Sangil
+- Sangli
+
+## synonym:siliguri
+- Siligur
+- Siligudi
+- Silguri
+
+## synonym:solapur
+- Sholapur
+- Solpur
+- Solapur
+
+## synonym:srinagar
+- Srinagr
+- Sirinagar
+- Sirnagar
+
+## synonym:sultanpur
+- Sultanapur
+- Sulatanpur
+- Sultanpur
+
+## synonym:surat
+- Surat
+- Soorat
+
+## synonym:thiruvananthapuram
+- Trivandram
+- Thiruvanantapuram
+- Thiruvanthapuram
+
+## synonym:thrissur
+- Thirissur
+- Thrisur
+- Thirisur
+
+## synonym:Tiruchirappalli
+- Tiruchirapalli
+- Tiruchirappali
+- Tiruchirapali
+
+## synonym:tirunelveli
+- Trunelveli
+- Thirunelveli
+- Tirnelveli
+
+## synonym:tiruppur
+- Tirupur
+- Tiruppor
+- Tiruppur
+
+## synonym:ujjain
+- Ujain
+- Ujjan
+- Ujjain
+
+## synonym:bijapur
+- Bijpur
+- Bijapur
+- Bijapur
+
+## synonym:vadodara
+- Baroda
+- Vadodra
+- Vadodara
+
+## synonym:varanasi
+- Varansi
+- Banaras
+- Varanasi
+
+## synonym:Vasai-Virar City
+- Vasai City
+- Virar City
+- Vasai-Virar City
+
+## synonym:vijayawada
+- Vijaywada
+- Vijayawada
+- Vijaiawada
+
+## synonym:Visakhapatnam
+- Visakapatnam
+- Vishakhapatnam
+- Vishakapatnam
+
+## synonym:warangal
+- Warangal
 
 ## synonym:mid
 - moderate
@@ -164,9 +693,3 @@
 
 ## regex:greet
 - hey[.]*
-
-## lookup: location
-  data/lookups/location.txt
-
-## lookup: cuisine
-  data/lookups/cuisine.txt
