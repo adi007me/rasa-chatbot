@@ -18,7 +18,7 @@ Thank You for using Foodie
 #The mail addresses and password
 # sender_address = os.environ.get('SENDER_EMAIL')
 sender_address = "iamrasa.x@gmail.com"
-sender_pass = os.environ.get('x.rasamai!@#')
+sender_pass = 'x.asarmai!@#'
 
 def send(receiver_address, loc, cuisine, subject='Restaurant Search Bot'):
   if ((sender_address is None) or (sender_pass is None)):
