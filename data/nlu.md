@@ -54,15 +54,18 @@
 - please show me a few [italian](cuisine) restaurants in [bangalore](location)
 - I am looking for restaurant
 - [pune](location)
-- [Lesser than Rs. 300](budget)
-- [Rs. 300 to 700](budget)
-- [More than 700](budget)
+- [Lesser than Rs. 300]{"entity": "budget", "value": "Lesser than Rs. 300"}
+- [Rs. 300 to 700]{"entity": "budget", "value": "Rs. 300 to 700"}
+- [More than 700]{"entity": "budget", "value": "More than 700"}
 - yes. Please send it to [adi007me@gmail.com](email)
 - [abcd@xyz.com](email)
 - [Thodupuzha](location)
 - can you suggest some good restaurants in [New](location) [Delhi](location)
 - I'll prefer [chines]{"entity": "cuisine", "value": "chinese"}
-- [>700](budget)
+- [>700]{"entity": "budget", "value": "More than 700"}
+- [Something between 300 to 700]{"entity": "budget", "value": "Rs. 300 to 700"}
+- [less than 300]{"entity": "budget", "value": "Lesser than Rs. 300"}
+- [<300]{"entity": "budget", "value": "Lesser than Rs. 300"}
 - yes. please send it to [siva.cem@gmail.com](email)
 - [iamrasa.x@gmail.com](email)
 - [siva.cem@gmail.com](email)
@@ -133,6 +136,26 @@
 
 ## synonym:4
 - four
+
+## synonym: More than 700
+- more than 700
+- more than Rs. 700
+- greater than 700
+- anything above 700
+- above 700
+
+## synonym: Rs. 300 to 700
+- within Rs. 300 to Rs. 700
+- within 300 to 700
+- between 300 and 700
+
+## synonym: Lesser than Rs. 300
+- lesser than 300
+- lesser than Rs. 300
+- not above Rs 300
+- not above 300
+- below 300
+- below Rs. 300
 
 ## lookup: location
   data/lookups/location.txt

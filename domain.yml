@@ -101,3 +101,5 @@ slots:
     type: bool
   location:
     type: text
+  no_results:
+    type: bool

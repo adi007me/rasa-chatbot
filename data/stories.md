@@ -16,7 +16,9 @@
     - utter_search_in_progress
     - action_search_restaurants
     - slot{"location": "mumbai"}
+    - slot{"no_results": false}
     - slot{"error": false}
+    - slot{"budget": "Lesser than Rs. 300"}
     - utter_ask_email
 * restaurant_search{"email": "abc@xyz.com"}
     - slot{"email": "abc@xyz.com"}
@@ -41,7 +43,9 @@
     - utter_search_in_progress
     - action_search_restaurants
     - slot{"location": "mumbai"}
+    - slot{"no_results": false}
     - slot{"error": false}
+    - slot{"budget": "Lesser than Rs. 300"}
     - utter_ask_email
 * restaurant_search{"email": "abc@xyz.com"}
     - slot{"email": "abc@xyz.com"}
@@ -66,7 +70,9 @@
     - utter_search_in_progress
     - action_search_restaurants
     - slot{"location": "mumbai"}
+    - slot{"no_results": false}
     - slot{"error": false}
+    - slot{"budget": "Lesser than Rs. 300"}
     - utter_ask_email
 * affirm
     - utter_ask_email_id
@@ -90,12 +96,14 @@
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
     - utter_ask_budget
-* restaurant_search{"budget": "Lesser than Rs. 300"}
-    - slot{"budget": "Lesser than Rs. 300"}
+* restaurant_search{"budget": "Rs. 300 to 700"}
+    - slot{"budget": "Rs. 300 to 700"}
     - utter_search_in_progress
     - action_search_restaurants
     - slot{"location": "mumbai"}
+    - slot{"no_results": false}
     - slot{"error": false}
+    - slot{"budget": "Rs. 300 to 700"}
     - utter_ask_email
 * deny
     - utter_goodbye
@@ -116,6 +124,8 @@
     - utter_search_in_progress
     - action_search_restaurants
     - slot{"location": "mumbai"}
+    - slot{"no_results": false}
+    - slot{"budget": "Lesser than Rs. 300"}
     - slot{"error": true}
 
 
@@ -130,11 +140,13 @@
 * restaurant_search{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
     - utter_ask_budget
-* restaurant_search{"budget": ">700"}
-    - slot{"budget": ">700"}
+* restaurant_search{"budget": "More than 700"}
+    - slot{"budget": "More than 700"}
     - utter_search_in_progress
     - action_search_restaurants
     - slot{"location": "Delhi"}
+    - slot{"no_results": false}
+    - slot{"budget": "More than 700"}
     - slot{"error": false}
     - utter_ask_email
 * restaurant_search{"email": "siva.cem@gmail.com"}
@@ -185,11 +197,13 @@
 * restaurant_search{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
     - utter_ask_budget
-* restaurant_search{"budget": ">700"}
-    - slot{"budget": ">700"}
+* restaurant_search{"budget": "More than 700"}
+    - slot{"budget": "More than 700"}
     - utter_search_in_progress
     - action_search_restaurants
     - slot{"location": "Delhi"}
+    - slot{"no_results": false}
+    - slot{"budget": "More than 700"}
     - slot{"error": false}
     - utter_ask_email
 * restaurant_search{"email": "siva.cem@gmail.com"}
@@ -197,3 +211,25 @@
     - action_send_email
     - slot{"error": true}
     - utter_something_wrong
+
+## Story: No results found
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "delhi"}
+    - slot{"location": "delhi"}
+    - action_check_city_support
+    - slot{"city_support": true}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "Chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_budget
+* restaurant_search{"budget": "Lesser than Rs. 300"}
+    - slot{"budget": "Lesser than Rs. 300"}
+    - utter_search_in_progress
+    - action_search_restaurants
+    - slot{"no_results": true}
+    - slot{"location": "mumbai"}
+    - slot{"budget": "Lesser than Rs. 300"}
+    - slot{"error": false}
