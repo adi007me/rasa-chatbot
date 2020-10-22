@@ -198,12 +198,13 @@
 - Ahmedbad
 - Ahmeadbad
 
-## synonym:Bangalore
+## synonym:Bengaluru
 - bengaluru
 - bangalore
 - Bangalur
 - banglore
 - banglor
+- Bangalore
 
 ## synonym:chennai
 - chenai
@@ -473,12 +474,13 @@
 ## synonym:Kochi
 - Cochi
 - cochin
-- Kochi
+- kochi
 
 ## synonym:Kottayam
 - Kotayam
 - Kottyam
-- Kottayam
+- kottayam
+- kotayam
 
 ## synonym:kolhapur
 - Kolapur
@@ -492,13 +494,13 @@
 
 ## synonym:kota
 - Kota
-- Kota
-- Kota
 
 ## synonym:kozhikode
 - Kozhikod
 - Kozhikode
-- Kozhikode
+- kozhikod
+- calicut
+- Calicut
 
 ## synonym:kurnool
 - Kurnol
@@ -517,8 +519,6 @@
 
 ## synonym:madurai
 - Madurai
-- Madurai
-- Madurai
 
 ## synonym:malappuram
 - Malapuram
@@ -534,6 +534,8 @@
 - Mangalor
 - Manglore
 - Mangalore
+- mangaluru
+- Mangaluru
 
 ## synonym:meerut
 - Merut
@@ -549,6 +551,8 @@
 - mysore
 - Mysor
 - Mysure
+- mysuru
+- Mysuru
 
 ## synonym:nagpur
 - Nagpure
@@ -646,11 +650,14 @@
 - Trivandram
 - Thiruvanantapuram
 - Thiruvanthapuram
+- trivandram
 
 ## synonym:thrissur
 - Thirissur
 - Thrisur
 - Thirisur
+- thrichur
+- Thrichur
 
 ## synonym:Tiruchirappalli
 - Tiruchirapalli
@@ -701,6 +708,8 @@
 - Visakapatnam
 - Vishakhapatnam
 - Vishakapatnam
+- vizag
+- Vizag
 
 ## synonym:warangal
 - Warangal
