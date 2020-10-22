@@ -103,3 +103,4 @@ slots:
     type: text
   no_results:
     type: bool
+    
