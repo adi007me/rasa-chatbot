@@ -48,7 +48,8 @@ class ActionSearchRestaurants(Action):
             dispatcher.utter_message(response)
 
             return [SlotSet('location',loc), SlotSet('error', False)]
-        except:
+        except Exception as ex:
+            print(str(ex))
             dispatcher.utter_message("Something went wrong. Please try again later.")
             return [SlotSet('error', True)]
 
@@ -67,7 +68,8 @@ class ActionSendEmail(Action):
             sendemail.send(receiver_address, loc, cuisine, subject='Restaurant Search Bot')
 
             return [SlotSet('email', receiver_address)]
-        except:
+        except Exception as ex:
+            print("Exception: ", str(ex))
             return [SlotSet('error', True)]
 
 
@@ -79,10 +81,26 @@ class ActionCheckCitySupport(Action):
         try:
             loc = tracker.get_slot('location')
 
-            supported_cities = [line.rstrip().lower() for line in open(r'data\lookups\location.txt')]
+            config={ "user_key":"7a65e3c0d290c885f1754d52235da690"}
+            zomato = zomatopy.initialize_app(config)
 
-            supported = loc.lower() in supported_cities
+            # print("###", loc)
+            isValid = zomato.is_city_valid(loc)
+            if isValid:
+                supported_cities = [line.rstrip().lower() for line in open(r'data\lookups\location.txt')]
 
-            return [SlotSet('city_support', supported), SlotSet('error', False)]
-        except:
-            return [SlotSet('error', True)]
+                supported = loc.lower() in supported_cities
+
+                return [SlotSet('city_support', supported), SlotSet('error', False)]
+
+            else:
+                return [SlotSet('city_support', False), SlotSet('error', False)]
+
+        except Exception as ex:
+            err = str(ex)
+
+            if err == "InvalidCityName":
+                return [SlotSet('city_support', False), SlotSet('error', False)]
+            else:
+                print("Exception: ", err)
+                return [SlotSet('error', True)]

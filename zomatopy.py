@@ -1,5 +1,6 @@
 import requests
 import ast
+import json
 
 base_url = "https://developers.zomato.com/api/v2.1/"
 
@@ -57,6 +58,31 @@ class Zomato:
             else:
                 raise ValueError('InvalidCityId')
 
+
+    def is_city_valid(self, city_name):
+        """
+        Takes City Name as input.
+        Returns the ID for the city given as input.
+        """
+        if city_name.isalpha() == False:
+            raise ValueError('InvalidCityName')
+        city_name = city_name.split(' ')
+        city_name = '%20'.join(city_name)
+        headers = {'Accept': 'application/json', 'user-key': self.user_key}
+        r = (requests.get(base_url + "cities?q=" + city_name, headers=headers).content).decode("utf-8")
+        a = json.loads(r)
+
+        self.is_key_invalid(a)
+        self.is_rate_exceeded(a)
+
+        ret = True
+        # print(a)
+        if len(a['location_suggestions']) == 0:
+            ret = False
+        elif a['location_suggestions'][0]['country_id'] != 1:
+            ret = False
+
+        return ret
 
     def get_city_name(self, city_ID):
         """
