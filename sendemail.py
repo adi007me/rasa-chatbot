@@ -16,7 +16,6 @@ Thank You for using Foodie
 '''
 
 #The mail addresses and password
-# sender_address = os.environ.get('SENDER_EMAIL')
 sender_address = "iamrasa.x@gmail.com"
 sender_pass = 'x.asarmai!@#'
 
@@ -57,7 +56,7 @@ def send(receiver_address, loc, cuisine, subject='Restaurant Search Bot'):
   return
 
 def get_restaurant_list(loc, cuisine):
-  config={ "user_key":"f4924dc9ad672ee8c4f8c84743301af5"}
+  config={ "user_key":"7a65e3c0d290c885f1754d52235da690"}
   zomato = zomatopy.initialize_app(config)
 
   location_detail=zomato.get_location(loc, 1)

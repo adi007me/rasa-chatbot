@@ -24,9 +24,14 @@ class ActionSearchRestaurants(Action):
             d1 = json.loads(location_detail)
             lat=d1["location_suggestions"][0]["latitude"]
             lon=d1["location_suggestions"][0]["longitude"]
-            cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north indian':50,'south indian':85}
+            cuisines_dict={ 'chinese': 25,
+                            'mexican' : 73,
+                            'italian': 55,
+                            'american': 1,
+                            'north indian':50,
+                            'south indian':85 }
 
-            results=zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 5)
+            results=zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine.lower())), 5)
             d = json.loads(results)
 
             response="Showing you top rated restaurants..\n"
@@ -52,17 +57,18 @@ class ActionSendEmail(Action):
         return "action_send_email"
     
     def run(self, dispatcher, tracker, domain):
-        receiver_address = tracker.get_slot('email')
-        loc = tracker.get_slot('location')
-        cuisine = tracker.get_slot('cuisine')
+        try:
+            receiver_address = tracker.get_slot('email')
+            loc = tracker.get_slot('location')
+            cuisine = tracker.get_slot('cuisine')
 
-        print('sending email')
+            print('sending email')
 
-        sendemail.send(receiver_address, loc, cuisine, subject='Restaurant Search Bot')
+            sendemail.send(receiver_address, loc, cuisine, subject='Restaurant Search Bot')
 
-        dispatcher.utter_message("Sent")
-
-        return [SlotSet('email', receiver_address)]
+            return [SlotSet('email', receiver_address)]
+        except:
+            return [SlotSet('error', True)]
 
 
 class ActionCheckCitySupport(Action):
@@ -70,13 +76,13 @@ class ActionCheckCitySupport(Action):
         return "action_check_city_support"
     
     def run(self, dispatcher, tracker, domain):
-        loc = tracker.get_slot('location')
+        try:
+            loc = tracker.get_slot('location')
 
-        with open("data\lookups\location.txt") as openfile:
-            for line in openfile:
-                if(line.rstrip("\n") == loc):
-                    return [SlotSet('city_support', True)]
+            supported_cities = [line.rstrip().lower() for line in open(r'data\lookups\location.txt')]
 
-        return [SlotSet('city_support', False)]
+            supported = loc.lower() in supported_cities
 
-
+            return [SlotSet('city_support', supported), SlotSet('error', False)]
+        except:
+            return [SlotSet('error', True)]

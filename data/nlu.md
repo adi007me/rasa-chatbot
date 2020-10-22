@@ -13,13 +13,17 @@
 - looking for restaurant
 - i'm hungry. looking out for some good restaurants
 - can you suggest some good restaurants in [Rishikesh](location)
+- can you suggest some good restaurants in [Perumbavoor](location)
+- can you suggest some good restaurants in [Thodupuzha](location)
 - i'm looking for a place to eat
 - I want to grab lunch
 - I am searching for a dinner spot
 - I am looking for some restaurants in [Delhi](location).
 - I am looking for some restaurants in [Bangalore](location)
+- I am looking for some restaurants in [Thodupuzha](location)
+- I am looking for some restaurants in [Perumbavoor](location)
 - show me [chinese](cuisine) restaurants
-- show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "Delhi"}
+- show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "delhi"}
 - show me a [mexican](cuisine) place in the [centre](location)
 - i am looking for an [indian](cuisine) spot called olaolaolaolaolaola
 - search for restaurants
@@ -49,14 +53,21 @@
 - please find me a restaurant in [ahmedabad](location)
 - please show me a few [italian](cuisine) restaurants in [bangalore](location)
 - I am looking for restaurant
-- [mumbai](location)
-- [North Indian](cuisine)
 - [pune](location)
 - [Lesser than Rs. 300](budget)
 - [Rs. 300 to 700](budget)
 - [More than 700](budget)
--  yes. Please send it to [adi007me@gmail.com](email)
+- yes. Please send it to [adi007me@gmail.com](email)
 - [abcd@xyz.com](email)
+- [Thodupuzha](location)
+- can you suggest some good restaurants in [New](location) [Delhi](location)
+- I'll prefer [chines]{"entity": "cuisine", "value": "chinese"}
+- [>700](budget)
+- yes. please send it to [siva.cem@gmail.com](email)
+- [iamrasa.x@gmail.com](email)
+- [siva.cem@gmail.com](email)
+- looking for a place to eat in [thodupuzha](location)
+- can you find me a place to eat in [pala](location)
 
 ## intent:affirm
 - yes
@@ -71,232 +82,7 @@
 - great choice
 - sounds really good
 - thanks
-- yes. please
-- Accept
-- Awesome!
-- Good
-- Great
-- I accept
-- I accept.
-- I agree
-- I am using it
-- I changed my mind. I want to accept it
-- I do
-- I get it
-- I guess so
-- I have used it in the past
-- I will
-- I'd absolutely love that
-- I'm sure I will!
-- I'm using it
-- Nice
-- OK
-- Ofcourse
-- Oh yes
-- Oh, ok
-- Ok
-- Ok let's start
-- Ok.
-- Okay
-- Okay!
-- PLEASE
-- SURE
-- Sure
-- Sweet
-- That would be great
-- YES
-- YUP
-- Yea
-- Yeah
-- Yeah sure
-- Yep
-- Yep that's fine
-- Yep!
-- Yepp
-- Yes
-- Yes I do
-- Yes please
-- Yes please!
-- Yes, I accept
-- Yes.
-- Yup
-- a little
-- absolutely
-- accept
-- accepted
-- agreed
-- ah ok
-- alright
-- alright, cool
-- amayzing
-- amazing!
-- awesome
-- awesome!
-- confirm
-- cool story bro
-- definitely yes without a doubt
-- done
-- fair enough
-- fcourse
-- fine
-- fuck yeah!
-- go
-- go ahead
-- go for it
-- going super well
-- good.
-- great
-- great lets do that
-- great!
-- hell yeah
-- hell yes
-- hm, i'd like that
-- how nice!
-- i accept
-- i agree
-- i am!
-- i want that
-- i will!
-- it is ok
-- its okay
-- ja
-- ja cool
-- ja thats great
-- jezz
-- jo
-- k
-- kk
-- lets do it
-- lets do this
-- not bad
-- of course
-- ofcoure i do
-- ofcourse
-- oh awesome!
-- oh cool
-- oh good !!
-- oh super
-- ok
-- ok cool
-- ok fine
-- ok friend
-- ok good
-- ok great
-- ok i accept
-- ok sara
-- ok, I behave now
-- ok, I understood
-- ok, Sara
-- ok...
-- okay
-- okay cool
-- okay sure
-- okay..
-- oki doki
-- okie
-- ook
-- oui
-- perfect
-- please
-- si
-- sort of
-- sure
-- sure thing
-- sure!
-- that is cool
-- that ok
-- that sounds fine
-- that's great
-- thats fine
-- thats good
-- thats great
-- top
-- uh-huh
-- very much
-- well yes
-- y
-- ya
-- ya cool
-- ya go for it
-- ya i want
-- ya please
-- ya thats cool
-- yaah
-- yap
-- yaps
-- yas
-- yay
-- ye
-- ye splease
-- yea
-- yeah
-- yeah do that
-- yeah sure
-- yeah'=
-- yeah, why not
-- yeeeeezzzzz
-- yeeees
-- yep
-- yep i want that
-- yep if i have to
-- yep please
-- yep that's nice
-- yep thats cool
-- yep, will do thank you
-- yep. :/
-- yes
-- yes ...
-- yes I do
-- yes accept please
-- yes baby
-- yes cool
-- yes give me information
-- yes go ahead
-- yes go for it
-- yes great
-- yes i accept
-- yes i agree
-- yes i have built a bot before
-- yes i have!
-- yes it is
-- yes it was okay
-- yes of course
-- yes pleae
-- yes please
-- yes please!
-- yes pls
-- yes sirfr
-- yes that's great
-- yes that's what i want
-- yes you can
-- yes'
-- yes, I'd love to
-- yes, cool
-- yes, give me information, please
-- yes,i am
-- yes.
-- yesh
-- yess
-- yessoo
-- yesss
-- yesssss
-- yesyestyes
-- yesyesyes
-- yez
-- yop
-- you asked me a yes or no question, which i answered with yes
-- you got me, I accept, if you want me to
-- yres
-- ys
-- yup
-- yyeeeh
-- Okay cool
-- ok..
-- considering
-- More a less
-- cool beans
-- sounds good!
-- really
+- thanks
 
 ## intent:deny
 - no
@@ -311,11 +97,6 @@
 - I dont want to tell
 - I'm not giving you my email address
 - I'm not going to give it to you
-- NEIN
-- NO
-- NO DON"T WANT THIS!
-- Nah
-- Neither
 - Never
 - Nevermind
 - No
@@ -326,85 +107,19 @@
 - Nopes
 - Not really
 - absolutely not
-- decline
-- definitely not
-- deny
-- i decline
-- i don not like this
-- i don't think so
-- i don't want either of those
-- i don't want to
-- i don't want to give you my email
-- i dont want to
-- i dont want to accept :P lol
-- i guess it means - no
-- i'm afraid not
-- i'm not sure
-- it is going pretty badly
-- it sucks
-- it sux
 - n
 - na
 - nah
-- nah I'm good
-- nah not for me
-- nah, first time
-- nah, i'm good
 - nehi
 - nein
-- neither
 - never
-- never mind
-- no
 - no :(
-- no I dont want
-- no I haven't decided yet if I want to sign up
-- no and no again
-- no bots at all
-- no go
-- no i can't
-- no i don't accept
-- no i dont want to
-- no i dont want to accept :P lol
-- no i won't
-- no ma'am
-- no sir
-- no sorry
-- no thank s
-- no thank you
-- no thanks
-- no way
-- no you did it wrong
-- no!!!!
-- no, i hate it
-- no, my frst time
-- no, thank you
-- no, thanks
-- no, thankyou
-- no. u r idiot
 - non
 - noooooooooo
 - noooooooooooooooooooooooooooooooooooooooo
 - nop
 - nope
 - nope!
-- nope. i am good
-- not going well at all
-- not really
-- not right now
-- not yet
-- nö
-- sorry not right now
-- still dont want to tell
-- thanks but no thanks
-- this sucks
-- very bad
-- I do not need help installing
-- I don't wanna tell the name of my company
-- no stop
-- stop it, i do not care!!!
-- none of them
-- I don't agree
 
 ## intent:goodbye
 - bye
@@ -419,24 +134,562 @@
 ## synonym:4
 - four
 
-## synonym:Delhi
-- New Delhi
+## lookup: location
+  data/lookups/location.txt
+
+## lookup: cuisine
+  data/lookups/cuisine.txt
 
 ## synonym:chinese
-- chines
 - Chinese
+- Chines
+- chines
+
+## synonym:mexican
+- Mexicn
+- Mexican
+- mxican
+
+## synonym:italian
+- Italian
+- Italin
+- Itlian
+
+## synonym:american
+- American
+- americn
+- amrican
+
+## synonym:south indian
+- South Indian
+- South indian
+- south Indian
+
+## synonym:north indian
+- North Indian
+- North indian
+- north Indian
+
+## synonym:ahmedabad
+- Ahmedabad
+- Ahmedbad
+- Ahmeadbad
+
+## synonym:Bangalore
+- bengaluru
+- bangalore
+- Bangalur
+- banglore
+- banglor
+
+## synonym:chennai
+- chenai
+- chenni
+- madras
+
+## synonym:delhi
+- New Delhi
+- Delli
+- Dilli
+- delhi
+- dilli
+- new delhi
+- newdelhi
+- NewDelhi
+
+## synonym:hyderabad
+- Hyderabad
+- hyderbad
+- hyderabd
+
+## synonym:kolkata
+- Kolkata
+- Calcutta
+- Kolkatta
+
+## synonym:mumbai
+- Mumbai
+- Bombai
+- Bombay
+
+## synonym:pune
+- Pne
+- Puna
+- puna
+
+## synonym:agra
+- Agra
+- Agra
+- Agra
+
+## synonym:ajmer
+- Ajmer
+- ajmr
+- ajmer
+
+## synonym:aligarh
+- alligarh
+- Aligarh
+- Aligadh
+
+## synonym:allahabad
+- Allahbad
+- Alahabad
+- Illahabad
+- Prayagraj
+
+## synonym:amravati
+- Amrvati
+- Amravatti
+- Amaravati
+
+## synonym:amritsar
+- amratsar
+- amaritsar
+- amrtsar
+
+## synonym:asansol
+- asnsol
+- asansole
+- asansol
+
+## synonym:aurangabad
+- aurangabad
+- arangbad
+- aurangabd
+
+## synonym:bareilly
+- barelly
+- barelly
+- bareilly
+
+## synonym:belgaum
+- Belgam
+- Belegaum
+- Belegam
+
+## synonym:bhavnagar
+- bhavanagar
+- Bhavnagar
+- bhaavnagar
+
+## synonym:bhiwandi
+- bhiwaandi
+- biwandi
+- bhiwandi
+
+## synonym:bhopal
+- Bhopa
+- Bhopl
+- Bhopal
+
+## synonym:bhubaneswar
+- bhubaneswar
+- Bhuvaneswar
+- Bhubaneshwar
+
+## synonym:bikaner
+- Bikaner
+- Bikanair
+- Bekaner
+
+## synonym:Bokaro Steel City
+- Bokaro
+- Bokaro Steel City
+- Bokaro Steel city
+
+## synonym:chandigarh
+- Chandigarh
+- Chandigadh
+- Chandigar
+
+## synonym:coimbatore
+- Coimbatore
+- cbe
+- Coimbator
+
+## synonym:Cuttack
+- Cuttck
+- Cuttak
+- Cuttack
+
+## synonym:dehradun
+- Dehradun
+- Deharadun
+- Dehradun
+
+## synonym:dhanbad
+- Dhanabad
+- Dhanbd
+- Dhanbad
+
+## synonym:Durg-Bhilai Nagar
+- Durg Nagar
+- Bhilai Nagar
+- Durg-Bhilai
+
+## synonym:durgapur
+- Duragapur
+- Durgapure
+- Durgapur
+
+## synonym:erode
+- Erode
+- Erod
+- erodey
+
+## synonym:faridabad
+- Faridabd
+- Fardabad
+- Faridabad
+
+## synonym:Firozabad
+- Firozbad
+- Firzabad
+- Firozabad
+
+## synonym:ghaziabad
+- Gaziabad
+- Ghazibad
+- Ghaziabad
+
+## synonym:gorakhpur
+- Gorakpur
+- Gorkhpur
+- Gorakhpur
+
+## synonym:gulbarga
+- Gulbrga
+- Gulbarg
+- Gulbarga
+
+## synonym:guntur
+- Guntr
+- Gantur
+- Guntoor
+
+## synonym:gurgaon
+- Gurugaon
+- Gurugram
+- Gurgao
+
+## synonym:guwahati
+- Gowahati
+- Guwahathi
+- Guwahati
+
+## synonym:gwalior
+- Gwaliar
+- Ghwaliar
+- Gwalior
+
+## synonym:Hubli-Dharwad
+- Hubli
+- Dharwad
+- Hubli-Darwad
+
+## synonym:indore
+- Indor
+- Indore
+- Indoor
+
+## synonym:jabalpur
+- jabalpur
+- Jablpur
+- Jabalpur
+
+## synonym:jaipur
+- Jaipure
+- Jaypur
+- Jaipur
+
+## synonym:jalandhar
+- Jalandhr
+- Jalanadhar
+- Jalandar
+
+## synonym:jammu
+- Jammu
+- Jamu
+
+## synonym:jamnagar
+- Jamanagar
+- Jamnagr
+- Jamnagar
+
+## synonym:jamshedpur
+- jamshedpure
+- Jamshedpur
+- Jamshedpur
+
+## synonym:jhansi
+- Jansi
+- Jhanasi
+- Jhansi
+
+## synonym:jodhpur
+- Jodpur
+- Jodhpure
+- Jodhpur
+
+## synonym:Kannur
+- Kanur
+- Kannur
+- Kannur
+
+## synonym:kanpur
+- cawnpur
+- Kaanpur
+- Kanpur
+
+## synonym:kakinada
+- Kakinda
+- Kakinad
+- Kakinada
+
+## synonym:Kochi
+- Cochi
+- cochin
+- Kochi
+
+## synonym:Kottayam
+- Kotayam
+- Kottyam
+- Kottayam
+
+## synonym:kolhapur
+- Kolapur
+- Kohlapur
+- Kolhapur
+
+## synonym:kollam
+- Kolam
+- Kollam
+- Kollam
+
+## synonym:kota
+- Kota
+- Kota
+- Kota
+
+## synonym:kozhikode
+- Kozhikod
+- Kozhikode
+- Kozhikode
+
+## synonym:kurnool
+- Kurnol
+- Koornool
+- Kurnool
+
+## synonym:lucknow
+- Lucknow
+- Lko
+- Luknow
+
+## synonym:ludhiana
+- Ludiana
+- Ludhiana
+- Ludhiana
+
+## synonym:madurai
+- Madurai
+- Madurai
+- Madurai
+
+## synonym:malappuram
+- Malapuram
+- Mallappuram
+- Malappuram
+
+## synonym:mathura
+- Matura
+- Mathura
+- Mathura
+
+## synonym:mangalore
+- Mangalor
+- Manglore
+- Mangalore
+
+## synonym:meerut
+- Merut
+- Meerut
+- Meerut
+
+## synonym:moradabad
+- Muradabad
+- Moradbad
+- Moradabad
+
+## synonym:mysore
+- mysore
+- Mysor
+- Mysure
+
+## synonym:nagpur
+- Nagpure
+- Nagpor
+- Nagpur
+
+## synonym:nanded
+- Nanded
+
+## synonym:nashik
+- Nasik
+- Nashik
+- Naseek
+
+## synonym:nellore
+- Nellor
+- Nelore
+- Nellore
+
+## synonym:noida
+- greater Noida
+- G. Noida
+- Noida
+
+## synonym:palakkad
+- Palakad
+- Pallakkad
+- Pallakad
+
+## synonym:patna
+- Patna
+
+## synonym:pondicherry
+- Puducherry
+- Puducherri
+- Pondi
+
+## synonym:raipur
+- Raipur
+- Raipoor
+
+## synonym:rajkot
+- Rjakot
+- Raajkot
+- Rajkot
+
+## synonym:rajahmundry
+- Rajamundry
+- Rajhmundry
+- Rajmundry
+
+## synonym:ranchi
+- Rancih
+- Ranchi
+
+## synonym:rourkela
+- Rourkel
+- Rorkela
+- Rourekla
+
+## synonym:salem
+- Selam
+- Salem
+
+## synonym:sangli
+- sangli
+- Sangil
+- Sangli
+
+## synonym:siliguri
+- Siligur
+- Siligudi
+- Silguri
+
+## synonym:solapur
+- Sholapur
+- Solpur
+- Solapur
+
+## synonym:srinagar
+- Srinagr
+- Sirinagar
+- Sirnagar
+
+## synonym:sultanpur
+- Sultanapur
+- Sulatanpur
+- Sultanpur
+
+## synonym:surat
+- Surat
+- Soorat
+
+## synonym:thiruvananthapuram
+- Trivandram
+- Thiruvanantapuram
+- Thiruvanthapuram
+
+## synonym:thrissur
+- Thirissur
+- Thrisur
+- Thirisur
+
+## synonym:Tiruchirappalli
+- Tiruchirapalli
+- Tiruchirappali
+- Tiruchirapali
+
+## synonym:tirunelveli
+- Trunelveli
+- Thirunelveli
+- Tirnelveli
+
+## synonym:tiruppur
+- Tirupur
+- Tiruppor
+- Tiruppur
+
+## synonym:ujjain
+- Ujain
+- Ujjan
+- Ujjain
+
+## synonym:bijapur
+- Bijpur
+- Bijapur
+- Bijapur
+
+## synonym:vadodara
+- Baroda
+- Vadodra
+- Vadodara
+
+## synonym:varanasi
+- Varansi
+- Banaras
+- Varanasi
+
+## synonym:Vasai-Virar City
+- Vasai City
+- Virar City
+- Vasai-Virar City
+
+## synonym:vijayawada
+- Vijaywada
+- Vijayawada
+- Vijaiawada
+
+## synonym:Visakhapatnam
+- Visakapatnam
+- Vishakhapatnam
+- Vishakapatnam
+
+## synonym:warangal
+- Warangal
 
 ## synonym:mid
 - moderate
 
-## regex:greet
-- hey[.]*
-
 ## regex:email
 - [A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Za-z]{2,}
 
-## lookup: location
-data/lookups/location.txt
+## regex:location
+- (.+pur)|(.+pradesh)|(.+nagar)$
 
-## lookup: cuisine
-data/lookups/cuisine.txt
+## regex:greet
+- hey[.]*
