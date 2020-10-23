@@ -27,7 +27,7 @@ class ActionSearchRestaurants(Action):
 
             results = [r for r in results if r['restaurant']['average_cost_for_two'] > 0]
 
-            results = sorted(results, key = lambda k: k['restaurant']['user_rating']['aggregate_rating'], reverse=True)
+            results = sorted(results, key = lambda k: float(k['restaurant']['user_rating']['aggregate_rating']), reverse=True)
 
             results = results[:5]
 
