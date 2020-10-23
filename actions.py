@@ -8,6 +8,7 @@ import zomatopy
 import json
 
 from concurrent.futures import ThreadPoolExecutor
+import asyncio
 
 import sendemail
 
@@ -72,7 +73,7 @@ class ActionSendEmail(Action):
 
             restaurants = results[:10]
 
-            sendemail.send(receiver_address, restaurants, subject='Restaurant Search Bot')
+            asyncio.ensure_future(sendemail.send(receiver_address, restaurants, subject='Restaurant Search Bot'))
 
             return [SlotSet('email', receiver_address)]
         except Exception as ex:
@@ -91,7 +92,6 @@ class ActionCheckCitySupport(Action):
             config={ "user_key":"7a65e3c0d290c885f1754d52235da690"}
             zomato = zomatopy.initialize_app(config)
 
-            # print("###", loc)
             isValid = zomato.is_city_valid(loc)
             if isValid:
                 supported_cities = [line.rstrip().lower() for line in open(r'data\lookups\location.txt')]
@@ -120,20 +120,6 @@ def get_all_restaurants(loc, cuisine, cost_start, cost_end):
     d1 = json.loads(location_detail)
     lat=d1["location_suggestions"][0]["latitude"]
     lon=d1["location_suggestions"][0]["longitude"]
-    
-    restaurants = []
-    executor = ThreadPoolExecutor(max_workers=5)
-    for start in range(0, 99, 20):
-        executor.submit(get_restaurants(lat, lon, cuisine, start, restaurants))
-    executor.shutdown()
-
-    restaurants = [r for r in restaurants if r['restaurant']['average_cost_for_two'] > cost_start and r['restaurant']['average_cost_for_two'] < cost_end]
-
-    return restaurants
-
-def get_restaurants(lat, lon, cuisine, start, restaurants):
-    config={ "user_key":"7a65e3c0d290c885f1754d52235da690" }
-    zomato = zomatopy.initialize_app(config)
 
     cuisines_dict={ 'chinese': 25,
                     'mexican' : 73,
@@ -142,7 +128,20 @@ def get_restaurants(lat, lon, cuisine, start, restaurants):
                     'north indian':50,
                     'south indian':85 }
 
-    result = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine.lower())), start, limit = 20)
+    cuisine_code = str(cuisines_dict.get(cuisine.lower()))
+    
+    restaurants = []
+
+    with ThreadPoolExecutor(max_workers=5) as e:
+        for start in range(0, 99, 20):
+            e.submit(get_restaurants, zomato, lat, lon, cuisine_code, start, restaurants)
+
+    restaurants = [r for r in restaurants if r['restaurant']['average_cost_for_two'] > cost_start and r['restaurant']['average_cost_for_two'] < cost_end]
+    
+    return restaurants
+
+def get_restaurants(zomato, lat, lon, cuisine_code, start, restaurants):
+    result = zomato.restaurant_search("", lat, lon, cuisine_code, start, limit = 20)
 
     restaurants.extend(json.loads(result)["restaurants"])
 
