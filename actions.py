@@ -68,7 +68,7 @@ class ActionSendEmail(Action):
             print('sending email')
             results = get_all_restaurants(loc, cuisine, cost_start, cost_end)
 
-            results = sorted(results, key = lambda k: k['restaurant']['user_rating']['aggregate_rating'], reverse=True)
+            results = sorted(results, key = lambda k: float(k['restaurant']['user_rating']['aggregate_rating']), reverse=True)
 
             restaurants = results[:10]
 
