@@ -15,6 +15,7 @@
 - can you suggest some good restaurants in [Rishikesh](location)
 - can you suggest some good restaurants in [Perumbavoor](location)
 - can you suggest some good restaurants in [Thodupuzha](location)
+- can you suggest some good restaurants in [ujjain](location)
 - i'm looking for a place to eat
 - I want to grab lunch
 - I am searching for a dinner spot
@@ -70,7 +71,10 @@
 - [iamrasa.x@gmail.com](email)
 - [siva.cem@gmail.com](email)
 - looking for a place to eat in [thodupuzha](location)
+- [ujjain](location)
 - can you find me a place to eat in [pala](location)
+- can you find me a place to eat in [ujjain](location)
+- looking for a place to eat in [ujjain](location)
 
 ## intent:affirm
 - yes
@@ -86,6 +90,12 @@
 - sounds really good
 - thanks
 - thanks
+- yes, please
+- cool
+- alright
+- perfect
+- yup
+- great, thanks
 
 ## intent:deny
 - no
