@@ -452,6 +452,10 @@
 - Cochi
 - cochin
 - kochi
+- ernakulam
+- Ernakulam
+- eranakulam
+- Eranakulam
 
 ## synonym:Kottayam
 - Kotayam
