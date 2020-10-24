@@ -6,6 +6,7 @@ actions:
 - utter_ask_budget
 - utter_ask_cuisine
 - utter_ask_email
+- utter_ask_email_id
 - utter_ask_howcanhelp
 - utter_ask_location
 - utter_ask_satisfied
@@ -24,9 +25,9 @@ entities:
 - people
 - price
 intents:
-- greet
 - restaurant_search
 - affirm
+- greet
 - goodbye
 - stop
 - deny
@@ -103,4 +104,3 @@ slots:
     type: text
   no_results:
     type: bool
-    

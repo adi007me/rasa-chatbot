@@ -233,3 +233,30 @@
     - slot{"location": "mumbai"}
     - slot{"budget": "Lesser than Rs. 300"}
     - slot{"error": false}
+
+## Story - Example 5
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_check_city_support
+    - slot{"city_support": true}
+    - slot{"error": false}
+    - utter_ask_budget
+* restaurant_search{"budget": "Rs. 300 to 700"}
+    - slot{"budget": "Rs. 300 to 700"}
+    - utter_search_in_progress
+    - action_search_restaurants
+    - slot{"location": "chandigarh"}
+    - slot{"error": false}
+    - slot{"no_results": false}
+    - slot{"budget": "Rs. 300 to 700"}
+    - utter_ask_email
+* affirm
+    - utter_ask_email_id
+* restaurant_search{"email": "iamshiv.tr@gmail.com"}
+    - slot{"email": "iamshiv.tr@gmail.com"}
+    - action_send_email
+    - slot{"email": "iamshiv.tr@gmail.com"}
+    - utter_inform_email_sent
