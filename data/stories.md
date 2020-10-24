@@ -6,7 +6,7 @@
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -35,7 +35,7 @@
     - slot{"cuisine": "Italian"}
     - slot{"location": "mumbai"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - slot{"error": false}
     - action_search_restaurants
     - slot{"location": "mumbai"}
@@ -55,7 +55,7 @@
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -82,7 +82,7 @@
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -113,7 +113,7 @@
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -136,7 +136,7 @@
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -157,7 +157,7 @@
 * restaurant_search{"location": "Delhi"}
     - slot{"location": "Delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
@@ -185,7 +185,7 @@
     - slot{"cuisine": "Italian"}
     - slot{"location": "delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - slot{"error": false}
     - utter_ask_budget
 * restaurant_search{"budget": " More than 700"}
@@ -207,7 +207,7 @@
     - slot{"budget": " Lesser than Rs. 300"}
     - slot{"location": "Chennai"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - slot{"error": false}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Mexican"}
@@ -230,7 +230,7 @@
 * restaurant_search{"location": "pune"}
     - slot{"location": "pune"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - slot{"error": false}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "South Indian"}
@@ -258,7 +258,7 @@
 * restaurant_search{"location": "Bengaluru"}
     - slot{"location": "Bengaluru"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - slot{"error": false}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Mexican"}
@@ -289,7 +289,7 @@
 * restaurant_search{"location": "thodupuzha"}
     - slot{"location": "thodupuzha"}
     - action_check_city_support
-    - slot{"city_support": false}
+    - slot{"city_support": "False"}
     - slot{"error": false}
     - utter_city_out_of_service
 
@@ -301,8 +301,30 @@
 * restaurant_search{"location": "Thodupuzha"}
     - slot{"location": "Thodupuzha"}
     - action_check_city_support
-    - slot{"city_support": false}
+    - slot{"city_support": "False"}
     - utter_city_out_of_service
+
+## Story for invalid city
+* greet
+    - utter_greet
+* restaurant_search{"location": "abcd"}
+    - slot{"location": "abcd"}
+    - action_check_city_support
+    - slot{"city_support": "Invalid"}
+    - slot{"error": false}
+    - utter_city_invalid
+
+## interactive_story_1
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "mumbaim"}
+    - slot{"location": "mumbaim"}
+    - action_check_city_support
+    - slot{"city_support": "Invalid"}
+    - slot{"error": false}
+    - utter_city_invalid
 
 ## Story for out of service city error
 * greet
@@ -319,7 +341,7 @@
 * restaurant_search{"location": "Delhi"}
     - slot{"location": "Delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
@@ -347,7 +369,7 @@
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "Chinese"}
     - slot{"cuisine": "chinese"}
@@ -368,7 +390,36 @@
     - slot{"cuisine": "chinese"}
     - slot{"location": "chandigarh"}
     - action_check_city_support
-    - slot{"city_support": true}
+    - slot{"city_support": "True"}
+    - slot{"error": false}
+    - utter_ask_budget
+* restaurant_search{"budget": "Rs. 300 to 700"}
+    - slot{"budget": "Rs. 300 to 700"}
+    - utter_search_in_progress
+    - action_search_restaurants
+    - slot{"location": "chandigarh"}
+    - slot{"error": false}
+    - slot{"no_results": false}
+    - slot{"budget": "Rs. 300 to 700"}
+    - utter_ask_email
+* affirm
+    - utter_ask_email_id
+* restaurant_search{"email": "iamshiv.tr@gmail.com"}
+    - slot{"email": "iamshiv.tr@gmail.com"}
+    - action_send_email
+    - slot{"email": "iamshiv.tr@gmail.com"}
+    - utter_inform_email_sent
+
+## Story - Cuisine in search
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_location
+* restaurant_search{"location": "mumbai"}
+    - slot{"location": "mumbai"}
+    - action_check_city_support
+    - slot{"city_support": "True"}
     - slot{"error": false}
     - utter_ask_budget
 * restaurant_search{"budget": "Rs. 300 to 700"}

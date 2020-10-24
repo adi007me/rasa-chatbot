@@ -12,14 +12,14 @@
 ## intent:restaurant_search
 - looking for restaurant
 - i'm hungry. looking out for some good restaurants
-- I'm hungry. Looking out for some good [chinese](cuisine) restaurants in [chandigarh](location)
-- I'm hungry. Looking out for some good [chinese](cuisine) restaurants in [Delhi](location)
-- I'm hungry. Looking out for some good [chinese](cuisine) restaurants in [Bangalore](location)
-- I'm hungry. Looking out for some good [chinese](cuisine) restaurants in [Thodupuzha](location)
-- I'm hungry. Looking out for some good [south indian](cuisine) restaurants in [chandigarh](location)
-- I'm hungry. Looking out for some good [south indian](cuisine) restaurants in [Delhi](location)
-- I'm hungry. Looking out for some good [south indian](cuisine) restaurants in [Bangalore](location)
-- I'm hungry. Looking out for some good [south indian](cuisine) restaurants in [Thodupuzha](location)
+- I'm hungry. Looking out for some good [Chinese](cuisine) restaurants in [chandigarh](location)
+- I'm hungry. Looking out for some good [Chinese](cuisine) restaurants in [Delhi](location)
+- I'm hungry. Looking out for some good [Chinese](cuisine) restaurants in [Bangalore](location)
+- I'm hungry. Looking out for some good [Chinese](cuisine) restaurants in [Thodupuzha](location)
+- I'm hungry. Looking out for some good [South Indian](cuisine) restaurants in [chandigarh](location)
+- I'm hungry. Looking out for some good [South Indian](cuisine) restaurants in [Delhi](location)
+- I'm hungry. Looking out for some good [South Indian](cuisine) restaurants in [Bangalore](location)
+- I'm hungry. Looking out for some good [South Indian](cuisine) restaurants in [Thodupuzha](location)
 - I'm hungry. Looking out for some good [American](cuisine) restaurants in [Bangalore](location)
 - I'm hungry. Looking out for some good [American](cuisine) restaurants in [Thodupuzha](location)
 - I'm hungry. Looking out for some good [Italian](cuisine) restaurants in [chandigarh](location)
@@ -49,7 +49,7 @@
 - [South Indian](cuisine)
 - [North Indian](cuisine)
 - [Italian](cuisine)
-- [Chinese]
+- [Chinese](cuisine)
 - [chinese]{"entity": "cuisine", "value": "Chinese"}
 - [Lithuania](location)
 - Oh, sorry, in [Italy](location)
@@ -319,11 +319,6 @@
 - Illahabad
 - Prayagraj
 
-## synonym:american
-- American
-- americn
-- amrican
-
 ## synonym:amravati
 - Amrvati
 - Amravatti
@@ -391,11 +386,6 @@
 - chenai
 - chenni
 - madras
-
-## synonym:chinese
-- chines
-- Chinese
-- Chines
 
 ## synonym:coimbatore
 - Coimbatore
@@ -480,11 +470,6 @@
 - Indor
 - Indore
 - Indoor
-
-## synonym:italian
-- Italian
-- Italin
-- Itlian
 
 ## synonym:jabalpur
 - jabalpur
@@ -595,11 +580,6 @@
 - Merut
 - Meerut
 
-## synonym:mexican
-- Mexicn
-- Mexican
-- mxican
-
 ## synonym:mid
 - moderate
 
@@ -642,11 +622,6 @@
 - greater Noida
 - G. Noida
 - Noida
-
-## synonym:north indian
-- North Indian
-- North indian
-- north Indian
 
 ## synonym:palakkad
 - Palakad
@@ -707,11 +682,6 @@
 - Sholapur
 - Solpur
 - Solapur
-
-## synonym:south indian
-- South Indian
-- South indian
-- south Indian
 
 ## synonym:srinagar
 - Srinagr

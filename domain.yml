@@ -86,6 +86,8 @@ responses:
   - text: Searching best restaurants for you. Please wait ...
   utter_something_wrong:
   - text: Something went wrong. Please try again later.
+  utter_city_invalid:
+  - text: Sorry, didn’t find any such location. Can you please tell again?
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 0
@@ -93,7 +95,7 @@ slots:
   budget:
     type: text
   city_support:
-    type: bool
+    type: text
   cuisine:
     type: text
   email:

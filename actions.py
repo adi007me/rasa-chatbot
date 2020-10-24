@@ -49,7 +49,7 @@ class ActionSearchRestaurants(Action):
             dispatcher.utter_message(response)
 
             return [SlotSet('location',loc), SlotSet('error', False), SlotSet('no_results', False), SlotSet('budget', budget)]
-        except:
+        except Exception:
             logging.exception("message")
             dispatcher.utter_message("Something went wrong. Please try again later.")
             return [SlotSet('error', True)]
@@ -99,15 +99,15 @@ class ActionCheckCitySupport(Action):
 
                 supported = loc.lower() in supported_cities
 
-                return [SlotSet('city_support', supported), SlotSet('error', False)]
+                return [SlotSet('city_support', str(supported)), SlotSet('error', False)]
             else:
-                return [SlotSet('city_support', False), SlotSet('error', False)]
+                return [SlotSet('city_support', "Invalid"), SlotSet('error', False)]
 
         except Exception as ex:
             err = str(ex)
 
             if err == "InvalidCityName":
-                return [SlotSet('city_support', False), SlotSet('error', False)]
+                return [SlotSet('city_support', "Invalid"), SlotSet('error', False)]
             else:
                 logging.exception("message")
                 return [SlotSet('error', True)]
@@ -119,9 +119,7 @@ def get_all_restaurants(loc, cuisine, cost_start, cost_end):
     location_detail=zomato.get_location(loc, 1)
 
     d1 = json.loads(location_detail)
-    print(d1)
-    print(loc)
-    print(location_detail)
+
     lat=d1["location_suggestions"][0]["latitude"]
     lon=d1["location_suggestions"][0]["longitude"]
 
