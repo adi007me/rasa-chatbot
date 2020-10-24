@@ -18,13 +18,14 @@
 - i'm looking for a place to eat
 - I want to grab lunch
 - I am searching for a dinner spot
-- I am looking for some restaurants in [Delhi](location).
+- I am looking for some restaurants in [Delhi]{"entity": "location", "value": "delhi"}.
 - I am looking for some restaurants in [Bangalore](location)
 - I am looking for some restaurants in [Thodupuzha](location)
 - I am looking for some restaurants in [Perumbavoor](location)
-- show me [chinese](cuisine) restaurants
-- show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "delhi"}
-- show me a [mexican](cuisine) place in the [centre](location)
+- show me [Chinese](cuisine) restaurants
+- looking for [Chinese](cuisine) restaurant in [Mumbai](location)
+- show me [chines]{"entity": "cuisine", "value": "Chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "delhi"}
+- show me a [Mexican](cuisine) place in the [centre](location)
 - i am looking for an [indian](cuisine) spot called olaolaolaolaolaola
 - search for restaurants
 - anywhere in the [west](location)
@@ -34,24 +35,24 @@
 - [South Indian](cuisine)
 - [North Indian](cuisine)
 - [Italian](cuisine)
-- [Chinese]{"entity": "cuisine", "value": "chinese"}
-- [chinese](cuisine)
+- [Chinese]
+- [chinese]{"entity": "cuisine", "value": "Chinese"}
 - [Lithuania](location)
 - Oh, sorry, in [Italy](location)
 - in [delhi](location)
 - I am looking for some restaurants in [Mumbai](location)
-- I am looking for [mexican indian fusion](cuisine)
+- I am looking for [mexican indian fusion]{"entity": "cuisine", "value": "Mexican"}
 - can you book a table in [rome](location) in a [moderate]{"entity": "price", "value": "mid"} price range with [british](cuisine) food for [four]{"entity": "people", "value": "4"} people
-- [central](location) [indian](cuisine) restaurant
+- [central](location) [Indian]{"entity": "cuisine", "value": "North Indian"} restaurant
 - please help me to find restaurants in [pune](location)
 - Please find me a restaurantin [bangalore](location)
 - [mumbai](location)
 - show me restaurants
-- please find me [chinese](cuisine) restaurant in [delhi](location)
-- can you find me a [chinese](cuisine) restaurant
+- please find me [Chinese](cuisine) restaurant in [delhi](location)
+- can you find me a [Chinese](cuisine) restaurant
 - [delhi](location)
 - please find me a restaurant in [ahmedabad](location)
-- please show me a few [italian](cuisine) restaurants in [bangalore](location)
+- please show me a few [italian]{"entity": "cuisine", "value": "Italian"} restaurants in [bangalore](location)
 - I am looking for restaurant
 - [pune](location)
 - [Lesser than Rs. 300]{"entity": "budget", "value": "Lesser than Rs. 300"}
@@ -60,8 +61,8 @@
 - yes. Please send it to [adi007me@gmail.com](email)
 - [abcd@xyz.com](email)
 - [Thodupuzha](location)
-- can you suggest some good restaurants in [New](location) [Delhi](location)
-- I'll prefer [chines]{"entity": "cuisine", "value": "chinese"}
+- can you suggest some good restaurants in [New Delhi]{"entity": "location", "value": "delhi"}
+- I'll prefer [chines]{"entity": "cuisine", "value": "Chinese"}
 - [>700]{"entity": "budget", "value": "More than 700"}
 - [Something between 300 to 700]{"entity": "budget", "value": "Rs. 300 to 700"}
 - [less than 300]{"entity": "budget", "value": "Lesser than Rs. 300"}
@@ -71,6 +72,10 @@
 - [siva.cem@gmail.com](email)
 - looking for a place to eat in [thodupuzha](location)
 - can you find me a place to eat in [pala](location)
+- I am looking for [Italian](cuisine) restaurant in [Mumbai](location) with budget [more than 700](budget)
+- I am looking for [Chinese](cuisine) restaurant in [Chennai](location) with budget [in 300-700 range]{"entity": "budget", "value": "Rs. 300 to 700"}
+- I am looking for restaurant in [Chennai](location) with budget [below 300](budget)
+- looking for restaurant [below 300](budget)
 
 ## intent:affirm
 - yes
@@ -148,6 +153,7 @@
 - within Rs. 300 to Rs. 700
 - within 300 to 700
 - between 300 and 700
+- 300-700 range
 
 ## synonym: Lesser than Rs. 300
 - lesser than 300
@@ -163,33 +169,34 @@
 ## lookup: cuisine
   data/lookups/cuisine.txt
 
-## synonym:chinese
-- Chinese
+## synonym:Chinese
+- chinese
 - Chines
 - chines
 
-## synonym:mexican
+## synonym:Mexican
 - Mexicn
-- Mexican
+- mexican
 - mxican
 
-## synonym:italian
+## synonym:Italian
 - Italian
 - Italin
 - Itlian
+- italian
 
-## synonym:american
-- American
+## synonym:American
+- american
 - americn
 - amrican
 
-## synonym:south indian
-- South Indian
+## synonym:South Indian
+- south indian
 - South indian
 - south Indian
 
-## synonym:north indian
-- North Indian
+## synonym:North Indian
+- north indian
 - North indian
 - north Indian
 
