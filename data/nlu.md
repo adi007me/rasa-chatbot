@@ -741,7 +741,7 @@
 - Warangal
 
 ## regex:email
-- [A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Za-z]{2,}
+- ^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$
 
 ## regex:greet
 - hey[.]*
