@@ -283,6 +283,16 @@
     - slot{"email": "adi007me@gmail.com"}
     - utter_inform_email_sent
 
+## Story for out of service city 1
+* greet
+    - utter_greet
+* restaurant_search{"location": "thodupuzha"}
+    - slot{"location": "thodupuzha"}
+    - action_check_city_support
+    - slot{"city_support": "False"}
+    - slot{"error": false}
+    - utter_city_out_of_service
+
 ## Story for out of service city 2
 * greet
     - utter_greet
@@ -292,16 +302,6 @@
     - slot{"location": "Thodupuzha"}
     - action_check_city_support
     - slot{"city_support": "False"}
-    - utter_city_out_of_service
-
-## Story for out of service city 3
-* greet
-    - utter_greet
-* restaurant_search{"location": "Rishikesh"}
-    - slot{"location": "Rishikesh"}
-    - action_check_city_support
-    - slot{"city_support": "False"}
-    - slot{"error": false}
     - utter_city_out_of_service
 
 ## Story for invalid city
@@ -314,7 +314,41 @@
     - slot{"error": false}
     - utter_city_invalid
 
-## interactive_story_1
+## Story for not supported city; with cuisine and location
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_check_city_support
+    - slot{"city_support": "False"}
+    - slot{"error": false}
+    - utter_city_out_of_service
+
+## Story for invalid city; restaurant_search with cuisine and location
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_check_city_support
+    - slot{"city_support": "Invalid"}
+    - slot{"error": false}
+    - utter_city_invalid
+
+
+## Story for erroneous action_check_city_support; restaurant_search with cuisine and location
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_check_city_support
+    - slot{"error": true}
+    - utter_something_wrong
+
+
+## Story for invalid city; restaurant_search without any entities
 * greet
     - utter_greet
 * restaurant_search
@@ -409,6 +443,25 @@
     - action_send_email
     - slot{"email": "iamshiv.tr@gmail.com"}
     - utter_inform_email_sent
+
+## Story - Example 5 - no result
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_check_city_support
+    - slot{"city_support": "True"}
+    - slot{"error": false}
+    - utter_ask_budget
+* restaurant_search{"budget": "Rs. 300 to 700"}
+    - slot{"budget": "Rs. 300 to 700"}
+    - utter_search_in_progress
+    - action_search_restaurants
+    - slot{"location": "chandigarh"}
+    - slot{"error": false}
+    - slot{"no_results": true}
+    - slot{"budget": "Rs. 300 to 700"}
 
 ## Story - Cuisine in search
 * greet
