@@ -95,7 +95,11 @@ slots:
   budget:
     type: text
   city_support:
-    type: text
+    type: categorical
+    values:
+      - True
+      - False
+      - Invalid
   cuisine:
     type: text
   email:
