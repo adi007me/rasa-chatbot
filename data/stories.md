@@ -283,16 +283,6 @@
     - slot{"email": "adi007me@gmail.com"}
     - utter_inform_email_sent
 
-## Story for out of service city 1
-* greet
-    - utter_greet
-* restaurant_search{"location": "thodupuzha"}
-    - slot{"location": "thodupuzha"}
-    - action_check_city_support
-    - slot{"city_support": "False"}
-    - slot{"error": false}
-    - utter_city_out_of_service
-
 ## Story for out of service city 2
 * greet
     - utter_greet
@@ -302,6 +292,16 @@
     - slot{"location": "Thodupuzha"}
     - action_check_city_support
     - slot{"city_support": "False"}
+    - utter_city_out_of_service
+
+## Story for out of service city 3
+* greet
+    - utter_greet
+* restaurant_search{"location": "Rishikesh"}
+    - slot{"location": "Rishikesh"}
+    - action_check_city_support
+    - slot{"city_support": "False"}
+    - slot{"error": false}
     - utter_city_out_of_service
 
 ## Story for invalid city

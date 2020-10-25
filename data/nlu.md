@@ -29,6 +29,7 @@
 - can you suggest some good restaurants in [Perumbavoor](location)
 - can you suggest some good restaurants in [Thodupuzha](location)
 - can you suggest some good restaurants in [ujjain](location)
+- can you suggest some good restaurants in [kolkata](location)
 - i'm looking for a place to eat
 - I want to grab lunch
 - I am searching for a dinner spot
@@ -46,6 +47,7 @@
 - I am looking for [asian fusion](cuisine) food
 - I am looking a restaurant in [294328](location)
 - in [Gurgaon](location)
+- bengaluru{"entity":"location", "value":"Bengaluru"}
 - [South Indian](cuisine)
 - [North Indian](cuisine)
 - [Italian](cuisine)
@@ -56,7 +58,7 @@
 - in [delhi](location)
 - I am looking for some restaurants in [Mumbai](location)
 - I am looking for [mexican indian fusion]{"entity": "cuisine", "value": "Mexican"}
-- can you book a table in [rome](location) in a [moderate]{"entity": "price", "value": "mid"} price range with [british](cuisine) food for [four]{"entity": "people", "value": "4"} people
+- can you book a table in [rome](location) in a [moderate]{"entity": "budget", "value": "Rs. 300 to 700"} price range with [british](cuisine) food for four people
 - [central](location) [Indian]{"entity": "cuisine", "value": "North Indian"} restaurant
 - please help me to find restaurants in [pune](location)
 - Please find me a restaurantin [bangalore](location)
@@ -169,6 +171,8 @@
 - not above 300
 - below 300
 - below Rs. 300
+- low price
+- low cost
 
 ## synonym: More than 700
 - more than 700
@@ -176,12 +180,18 @@
 - greater than 700
 - anything above 700
 - above 700
+- high price
+- hidg cost
+- any cost
+- any price
 
 ## synonym: Rs. 300 to 700
 - within Rs. 300 to Rs. 700
 - within 300 to 700
 - between 300 and 700
 - 300-700 range
+- moderate price
+- moderate cost
 
 ## synonym:4
 - four
@@ -267,16 +277,6 @@
 - Kottyam
 - kottayam
 - kotayam
-
-## synonym:Lesser than Rs. 300
-- less than 300
-- <300
-
-## synonym:More than 700
-- >700
-
-## synonym:Rs. 300 to 700
-- Something between 300 to 700
 
 ## synonym:Tiruchirappalli
 - Tiruchirapalli
@@ -579,9 +579,6 @@
 ## synonym:meerut
 - Merut
 - Meerut
-
-## synonym:mid
-- moderate
 
 ## synonym:moradabad
 - Muradabad

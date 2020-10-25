@@ -22,8 +22,6 @@ entities:
 - cuisine
 - email
 - location
-- people
-- price
 intents:
 - restaurant_search
 - affirm
@@ -95,7 +93,11 @@ slots:
   budget:
     type: text
   city_support:
-    type: text
+    type: categorical
+    values:
+      - True
+      - False
+      - Invalid
   cuisine:
     type: text
   email:
